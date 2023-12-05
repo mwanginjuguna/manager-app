@@ -1,0 +1,75 @@
+[
+  {
+    "database": {
+      "DBNAME": "assistant",
+      "USER": "root",
+      "PASSWORD": "",
+      "tables": {
+        "users": [
+          {
+            "id": 1,
+            "name": "kanothe",
+            "email": "francis.kanothe@gmail.com"
+          }
+        ],
+        "projects": [
+          {
+            "id": 1,
+            "name": "Project 1",
+            "description": "This is the first project. The original of his kind. Ruler of the Projected.",
+            "deadline": "12122023121212",
+            "status": "Active",
+            "start_date": "12122024121212",
+            "end_date": "12122023121212",
+            "created_at": "12122023121212"
+          }
+        ],
+        "objectives": [
+          {
+            "id": 1,
+            "name": "Objective 1",
+            "description": "This is the first project. The original of his kind. Ruler of the Projected.",
+            "deadline": "12122023121212",
+            "status": "Active",
+            "project_id" : 1,
+            "task_id" : 1,
+            "milestone_id" : 1,
+            "start_date": "12122024121212",
+            "end_date": "12122023121212",
+            "created_at": "12122023121212"
+          }
+        ],
+        "milestones": [
+          {
+            "id": 1,
+            "name": "Milestone 1",
+            "description": "This is the first milestone. The original of his kind. Lord of the Miles.",
+            "deadline": "12122023121212",
+            "status": "Active",
+            "project_id" : 1,
+            "task_id" : 1,
+            "objective_id" : 1,
+            "start_date": "12122024121212",
+            "end_date": "12122023121212",
+            "created_at": "12122023121212"
+          }
+        ],
+        "task": [
+          {
+            "id": 1,
+            "name": "Task 1",
+            "description": "This is the first task. With so a responsibility, Power.",
+            "deadline": "12122023121212",
+            "status": "Active",
+            "project_id" : 1,
+            "milestone_id" : 1,
+            "objective_id" : 1,
+            "start_date": "12122024121212",
+            "end_date": "12122023121212",
+            "created_at": "12122023121212"
+          }
+        ]
+      }
+    }
+  }
+]
