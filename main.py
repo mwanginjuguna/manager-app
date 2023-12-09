@@ -2,6 +2,9 @@ from tkinter import *
 import ttkbootstrap as ttk
 from datetime import datetime
 from enum import Enum
+import mysql.connector
+import mysqlx
+
 # from tkinter import ttk
 
 """
@@ -15,6 +18,14 @@ from enum import Enum
         -
 """
 
+db_config = {
+    'user': 'root',
+    'password': '',
+    'host': '127.0.0.1',
+    'port': '3306',
+    'database': 'assistant'
+}
+
 
 class Status(Enum):
     PLANNING = 'Planning'
@@ -27,9 +38,12 @@ class Status(Enum):
 
 class Database:
     def __init__(self, config):
-        self.db_name = config['DBNAME']
+        self.db_name = config['DB_NAME']
+        self.db_host = config['DB_HOST']
         self.username = config['USER']
         self.password = config['PASSWORD']
+
+        self.cursor = mysql.connector.connect(**config)
 
     def find(self):
         pass
